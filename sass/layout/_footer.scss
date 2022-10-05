@@ -1,0 +1,92 @@
+.footer {
+	background-color: #2f303a;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+}
+.footer__address-box {
+	margin-right: 70px;
+	width: 250px;
+	.footer__address {
+		font-size: 14px;
+		line-height: 1.714;
+		font-style: normal;
+		margin-top: 20px;
+		.footer__address-text {
+			color: #ffffff;
+			margin-bottom: 9px;
+		}
+	}
+}
+.footer__contact-item {
+	margin-bottom: 9px;
+	.footer__contact-link {
+		color: rgba(255, 255, 255, 0.6);
+		transition: color 250ms var(--transition-timing);
+		&:hover,
+		&:focus {
+			color: var(--active-elements-color);
+		}
+	}
+}
+.footer__social-title,
+.footer__signup-label {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: #ffffff;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.footer__social-list {
+	display: flex;
+	gap: 10px;
+}
+.footer__signup-box {
+	display: flex;
+	justify-content: space-between;
+	height: 86px;
+	width: 570px;
+	margin-left: 78px;
+	.footer__signup-label {
+		position: relative;
+		&:focus-within .footer__signup-input {
+			border: 1px solid #fff;
+		}
+		.footer__signup-input {
+			position: absolute;
+			top: 35px;
+			left: 0;
+			width: 358px;
+			height: 50px;
+			background-color: transparent;
+			border-radius: 4px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			margin-right: 12px;
+			padding-left: 16px;
+			color: #fff;
+			outline: none;
+			@include transitionAnimation(border);
+		}
+	}
+}
+.btn--footer {
+	position: relative;
+	text-align: left;
+	padding-left: 42px;
+	align-self: flex-end;
+	.footer__signup-btn-icon {
+		fill: #fff;
+		position: absolute;
+		top: 13px;
+		right: 28px;
+	}
+}
+.logo-webstudio--footer {
+	color: #ffffff;
+}

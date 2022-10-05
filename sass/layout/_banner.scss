@@ -1,0 +1,27 @@
+.banner {
+	height: 600px;
+	max-width: 1600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #2f303a;
+	background-image: linear-gradient(
+			rgba(47, 48, 58, 0.4) 0%,
+			rgba(47, 48, 58, 0.4) 100%
+		),
+		url("../images/banner.jpeg");
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	.banner__heading {
+		width: 45%;
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.363;
+		text-align: center;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-bottom: 30px;
+	}
+}

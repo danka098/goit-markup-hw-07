@@ -1,0 +1,23 @@
+@use "./base/common";
+@use "./utils/mixins";
+@use "./utils/variables";
+
+@use "./components/container";
+@use "./components/btn";
+@use "./components/btn-gallery";
+@use "./components/logo";
+@use "./components/title";
+@use "./components/backdrop";
+@use "./components/social-link";
+@use "./components/footer-social-link";
+
+@use "./layout/header";
+@use "./layout/banner";
+@use "./layout/feature";
+@use "./layout/projects";
+@use "./layout/team";
+@use "./layout/clients";
+@use "./layout/footer";
+@use "./layout/gallery";
+@use "./layout/modal-form";
+@use "./layout/modal-agreement";

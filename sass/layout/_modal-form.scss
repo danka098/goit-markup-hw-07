@@ -1,0 +1,107 @@
+.modal {
+	position: absolute;
+	background-color: #fff;
+	width: 528px;
+	height: 581px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	transition-property: transform;
+	transition-duration: 1000ms;
+	transition-timing-function: ease-in;
+	transition-delay: 1000ms;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	.modal__close-btn {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 0;
+		background-color: #fff;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.modal__form-box {
+	margin: 40px;
+}
+.modal__form-title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	letter-spacing: 0.03em;
+	margin-bottom: 12px;
+}
+.modal__form-item {
+	position: relative;
+	width: 448px;
+	margin-bottom: 6px;
+}
+.modal__form-label,
+.modal__comment-label {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.01em;
+	color: var(--secondary-color);
+}
+.modal__form-input {
+	width: 448px;
+	height: 40px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	margin-top: 4px;
+	padding-left: 42px;
+	outline: none;
+	@include transitionAnimation(border);
+	.modal__form-icon {
+		@include transitionAnimation(fill);
+		position: absolute;
+		bottom: 11px;
+		left: 12px;
+	}
+}
+.modal__form-label:focus-within .modal__form-input,
+.modal__comment-text:focus {
+	border: 1px solid var(--active-elements-color);
+}
+.modal__form-label:focus-within .modal__form-icon {
+	fill: var(--active-elements-color);
+}
+.modal__comment-text {
+	width: 448px;
+	height: 120px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	margin-top: 4px;
+	padding: 12px 16px;
+	resize: none;
+	outline: none;
+	@include transitionAnimation(border);
+	&::placeholder {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 14px;
+		letter-spacing: 0.01em;
+		color: rgba(117, 117, 117, 0.5);
+	}
+}
+.btn--modal {
+	position: absolute;
+	bottom: 40px;
+	left: 164px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	@include transitionAnimation(box-shadow);
+	&:hover,
+	&:focus {
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	}
+}

@@ -1,0 +1,34 @@
+.team {
+	padding-bottom: 94px;
+	background-color: var(--third-color);
+}
+.team__members-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.team__member {
+	background-color: #ffffff;
+	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+		0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	.team__member-name {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.188;
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+	.team__member-position {
+		line-height: 1.188;
+		text-align: center;
+		color: var(--secondary-color);
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	.team__social-list {
+		display: flex;
+		justify-content: space-between;
+		padding: 16px 32px 30px 32px;
+	}
+}
