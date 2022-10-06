@@ -6,14 +6,14 @@
 	height: 44px;
 	border-radius: 50%;
 	cursor: pointer;
-	@include transitionAnimation(background-color);
+	// @include transitionAnimation(background-color);
 	.team__social-icon {
-		@include transitionAnimation(fill);
-		fill: var(--icon-color);
+		// @include transitionAnimation(fill);
+		fill: getColor("icon-color");
 	}
 	&:hover,
 	&:focus {
-		background-color: var(--active-elements-color);
+		background-color: getColor("active-element");
 	}
 	&:hover .team__social-icon,
 	&:focus .team__social-icon {

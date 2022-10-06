@@ -6,7 +6,8 @@
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
-	@include transitionAnimation(opacity, visibility);
+	// @include transitionAnimation(opacity);
+	// @include transitionAnimation(visibility);
 	// transition-property: opacity, visibility;
 	transition-duration: 1000ms;
 }

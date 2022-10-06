@@ -1,8 +1,8 @@
-@use "./base/common";
-@use "./utils/mixins";
+@use "./utils/colors";
 @use "./utils/variables";
+@use "./utils/mixins";
+@use "./base/common";
 
-@use "./components/container";
 @use "./components/btn";
 @use "./components/btn-gallery";
 @use "./components/logo";

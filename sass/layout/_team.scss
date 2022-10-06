@@ -1,6 +1,6 @@
 .team {
 	padding-bottom: 94px;
-	background-color: var(--third-color);
+	background-color: getColor("third");
 }
 .team__members-list {
 	display: flex;
@@ -8,7 +8,7 @@
 	flex-wrap: wrap;
 }
 .team__member {
-	background-color: #ffffff;
+	background-color: #fff;
 	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
 		0 1px 3px 0 rgba(0, 0, 0, 0.12);
 	.team__member-name {
@@ -22,7 +22,7 @@
 	.team__member-position {
 		line-height: 1.188;
 		text-align: center;
-		color: var(--secondary-color);
+		color: getColor("secondary");
 		margin-top: 10px;
 		margin-bottom: 0;
 	}

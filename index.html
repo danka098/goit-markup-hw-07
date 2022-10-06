@@ -402,5 +402,139 @@
   </div>
   <script src="./js/modal.js"></script>
 </body>
+<style>
+  .modal {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .modal__signup-box {
+    margin: 40px;
+  }
+
+  .modal__signup-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+
+  .modal__form-item {
+    position: relative;
+    width: 448px;
+    margin-bottom: 6px;
+  }
+
+  .modal__signup-label,
+  .modal__comment-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--secondary-color);
+  }
+
+  .modal__signup-input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 42px;
+    outline: none;
+    transition: border 250ms var(--transition-timing);
+  }
+
+  .modal__signup-icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    transition: fill 250ms var(--transition-timing);
+  }
+
+  .modal__signup-label:focus-within .modal__signup-input,
+  .modal__comment-text:focus {
+    border: 1px solid var(--active-elements-color);
+  }
+
+  .modal__signup-label:focus-within .modal__signup-icon {
+    fill: var(--active-elements-color);
+  }
+
+  .modal__comment-text {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 12px 16px;
+    resize: none;
+    outline: none;
+    transition: border 250ms var(--transition-timing);
+  }
+
+  .modal__comment-text::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  .modal__agreement-label {
+    width: 420px;
+    height: 24px;
+    margin: 20px 54px 30px;
+  }
+
+  .modal__agreement-input {
+    opacity: 0;
+  }
+
+  .modal__agreement-text {
+    position: absolute;
+    bottom: 115px;
+    left: 77px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color);
+  }
+
+  .modal__agreement-link {
+    text-decoration: underline;
+    color: var(--active-elements-color);
+  }
+
+  .modal__agreement-icon-check {
+    fill: #fff;
+    border: 1.5px solid #212121;
+    border-radius: 1px;
+    transition: fill 250ms var(--transition-timing);
+    transition: border 250ms var(--transition-timing);
+  }
+
+  .modal__agreement-icon-check,
+  .modal__agreement-input {
+    position: absolute;
+    bottom: 120px;
+    left: 54px;
+  }
+
+  .modal__agreement-input:checked+.modal__agreement-icon-check {
+    fill: var(--active-elements-color);
+    stroke: var(--active-elements-color);
+    border: transparent;
+  }
+
+  .modal__signup-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 164px;
+  }
+</style>
 
 </html>

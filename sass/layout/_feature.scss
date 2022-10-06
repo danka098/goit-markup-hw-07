@@ -7,7 +7,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--third-color);
+	background-color: getColor("third");
 	border-radius: 4px;
 	height: 120px;
 }
@@ -21,7 +21,7 @@
 .feature__text {
 	font-size: 14px;
 	line-height: 1.714;
-	color: var(--secondary-color);
+	color: getColor("secondary");
 	letter-spacing: 0.03em;
 	margin: 0;
 }

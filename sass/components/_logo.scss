@@ -7,9 +7,9 @@
 		font-weight: 700;
 		font-size: 26px;
 		line-height: 1.192;
-		color: var(--main-color);
+		color: getColor(main);
 		.logo-highlight {
-			color: var(--active-elements-color);
+			color: getColor("active-element");
 		}
 	}
 }
