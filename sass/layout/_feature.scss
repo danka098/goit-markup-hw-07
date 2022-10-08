@@ -1,3 +1,5 @@
+@import ".././utils/variables";
+
 .feature__item-list {
 	display: flex;
 	gap: 30px;
@@ -12,14 +14,14 @@
 	height: 120px;
 }
 .feature__title {
-	font-size: 14px;
+	font-size: getSize("menuSize");
 	line-height: 1.143;
 	margin-top: 30px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 .feature__text {
-	font-size: 14px;
+	font-size: getSize("menuSize");
 	line-height: 1.714;
 	color: getColor("secondary");
 	letter-spacing: 0.03em;

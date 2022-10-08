@@ -1,3 +1,9 @@
+@import ".././utils/variables";
+@import ".././utils/mixins";
+
+.container.section {
+	padding: $paddingSection;
+}
 .gallery__filter-list {
 	display: flex;
 	gap: 8px;
@@ -13,10 +19,10 @@
 		gap: 30px;
 		position: relative;
 		overflow: hidden;
-		// @include transitionAnimation(box-shadow);
+		transition: box-shadow $mainTransition;
 		&:hover,
 		&:focus {
-			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+			box-shadow: $mainBoxShadow;
 		}
 		&:hover .gallery__description {
 			transform: translateY(-294px);
@@ -37,11 +43,10 @@
 	align-items: center;
 	justify-content: center;
 	transform: translateY(0);
-	// @include transitionAnimation(transform);
-	transition-duration: 1000ms;
+	transition: transform 1000ms $timingTransition;
 	.gallery__description-text {
 		color: #fff;
-		font-size: 18px;
+		font-size: getSize("h3");
 		line-height: 28px;
 		letter-spacing: 0.03em;
 		margin-left: 24px;
@@ -51,11 +56,11 @@
 .gallery__caption {
 	position: relative;
 	background-color: #fff;
-	border: 1px solid #eeeeee;
+	@include bordered(#eeeeee);
 	z-index: 1;
 	.gallery__name {
 		font-weight: 700;
-		font-size: 18px;
+		font-size: getSize("h3");
 		line-height: 36px;
 		letter-spacing: 0.06em;
 		margin: 20px 0px 0px 24px;

@@ -1,3 +1,5 @@
+@import ".././utils/variables";
+
 .modal__agreement-label {
 	width: 420px;
 	height: 24px;
@@ -6,13 +8,13 @@
 		position: absolute;
 		bottom: 115px;
 		left: 77px;
-		font-size: 14px;
+		font-size: getSize("menuSize");
 		line-height: 24px;
 		letter-spacing: 0.03em;
-		color: getColor(secondary);
+		color: getColor("secondary");
 		.modal__agreement-link {
 			text-decoration: underline;
-			color: getColor(active-element);
+			color: getColor("active-element");
 		}
 	}
 	.modal__agreement-input {
@@ -26,17 +28,14 @@
 		bottom: 120px;
 		left: 54px;
 		fill: #fff;
-		border: 1.5px solid getColor(main);
+		border: 1.5px solid getColor("main");
 		border-radius: 1px;
-		// @include transitionAnimation(fill, border);
-		// @include transitionAnimation(border);
-		// transition: fill 250ms var(--transition-timing);
-		// transition: border 250ms var(--transition-timing);
+		transition: fill $mainTransition, border $mainTransition;
 	}
 }
 
 .modal__agreement-input:checked + .modal__agreement-icon {
-	fill: getColor(active-element);
-	stroke: getColor(active-element);
+	fill: getColor("active-element");
+	stroke: getColor("active-element");
 	border: transparent;
 }

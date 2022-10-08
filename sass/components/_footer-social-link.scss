@@ -1,3 +1,5 @@
+@import ".././utils/variables";
+
 .footer__social-link {
 	display: flex;
 	justify-content: center;
@@ -6,9 +8,9 @@
 	height: 44px;
 	border-radius: 50%;
 	cursor: pointer;
-	// @include transitionAnimation(background-color);
 	background-color: #44454f;
 	border-radius: 50%;
+	transition: background-color $timingTransition;
 	&:hover,
 	&:focus {
 		background-color: getColor("active-element");

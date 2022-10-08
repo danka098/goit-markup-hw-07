@@ -1,13 +1,9 @@
-:root {
-  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
-  color: getColor("main");
+  color: #212121;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -20,7 +16,7 @@ body {
 }
 
 .section {
-  padding-top: 94px;
+  padding: 94px 0 0 0;
 }
 
 ul,
@@ -48,10 +44,6 @@ h5 {
   padding: 0;
 }
 
-.padding-bt {
-  padding-bottom: 94px;
-}
-
 .btn {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -70,7 +62,7 @@ h5 {
   color: #ffffff;
   width: 200px;
   height: 50px;
-  background: getColor("active-element");
+  background: #2196f3;
 }
 
 .btn--gallery {
@@ -78,31 +70,29 @@ h5 {
   font-size: 16px;
   line-height: 1.625;
   padding: 6px 22px;
-  background-color: getColor("third");
+  background-color: #f5f4fa;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn--gallery:hover, .btn--gallery:focus {
-  background-color: getColor("active-element");
+  background-color: #2196f3;
   color: #fff;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.logo-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 24px 93px 25px 0;
-}
-.logo-container .logo-webstudio {
+.logo-webstudio {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
-  color: getColor(main);
+  color: #212121;
 }
-.logo-container .logo-webstudio .logo-highlight {
-  color: getColor("active-element");
+.logo-webstudio .logo-highlight {
+  color: #2196f3;
 }
 
 .main-title {
@@ -121,8 +111,8 @@ h5 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
+  -webkit-transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -150,12 +140,16 @@ h5 {
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team__social-link .team__social-icon {
-  fill: getColor("icon-color");
+  fill: #afb1b8;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team__social-link:hover, .team__social-link:focus {
-  background-color: getColor("active-element");
+  background-color: #2196f3;
 }
 .team__social-link:hover .team__social-icon, .team__social-link:focus .team__social-icon {
   fill: #ffffff;
@@ -177,12 +171,55 @@ h5 {
   cursor: pointer;
   background-color: #44454f;
   border-radius: 50%;
+  -webkit-transition: background-color cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__social-link:hover, .footer__social-link:focus {
-  background-color: getColor("active-element");
+  background-color: #2196f3;
 }
 .footer__social-link .footer__social-icon {
   fill: #fff;
+}
+
+.modal__agreement-label {
+  width: 420px;
+  height: 24px;
+  margin: 20px 54px 30px;
+}
+.modal__agreement-label .modal__agreement-text {
+  position: absolute;
+  bottom: 115px;
+  left: 77px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.modal__agreement-label .modal__agreement-text .modal__agreement-link {
+  text-decoration: underline;
+  color: #2196f3;
+}
+.modal__agreement-label .modal__agreement-input {
+  position: absolute;
+  bottom: 120px;
+  left: 54px;
+  opacity: 0;
+}
+.modal__agreement-label .modal__agreement-icon {
+  position: absolute;
+  bottom: 120px;
+  left: 54px;
+  fill: #fff;
+  border: 1.5px solid #212121;
+  border-radius: 1px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__agreement-input:checked + .modal__agreement-icon {
+  fill: #2196f3;
+  stroke: #2196f3;
+  border: transparent;
 }
 
 .header {
@@ -192,6 +229,12 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.header .container .logo-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 93px 25px 0;
 }
 
 .menu__item-list {
@@ -225,14 +268,14 @@ h5 {
 }
 .menu__item--active::after {
   content: "";
-  background-color: getColor(active-element);
+  background-color: #2196f3;
   height: 4px;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 .menu__item--active .menu__link {
-  color: getColor(active-element);
+  color: #2196f3;
 }
 
 .menu__link {
@@ -240,10 +283,12 @@ h5 {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
-  color: getColor(main);
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu__link:hover, .menu__link:focus {
-  color: getColor(active-element);
+  color: #2196f3;
 }
 
 .header__contact-list {
@@ -262,6 +307,8 @@ h5 {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,13 +316,17 @@ h5 {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  color: getColor(secondary);
+  color: #757575;
 }
 .header__contact-link:hover, .header__contact-link:focus {
-  color: getColor(active-element);
+  color: #2196f3;
+}
+.header__contact-link .header__contact-icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__contact-link:hover .header__contact-icon, .header__contact-link:focus .header__contact-icon {
-  fill: getColor(active-element);
+  fill: #2196f3;
 }
 
 .banner {
@@ -333,7 +384,7 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: getColor("third");
+  background-color: #f5f4fa;
   border-radius: 4px;
   height: 120px;
 }
@@ -349,9 +400,13 @@ h5 {
 .feature__text {
   font-size: 14px;
   line-height: 1.714;
-  color: getColor("secondary");
+  color: #757575;
   letter-spacing: 0.03em;
   margin: 0;
+}
+
+.projects.section {
+  padding: 94px 0 94px;
 }
 
 .projects__img-list {
@@ -395,7 +450,7 @@ h5 {
 
 .team {
   padding-bottom: 94px;
-  background-color: getColor("third");
+  background-color: #f5f4fa;
 }
 
 .team__members-list {
@@ -425,7 +480,7 @@ h5 {
 .team__member .team__member-position {
   line-height: 1.188;
   text-align: center;
-  color: getColor("secondary");
+  color: #757575;
   margin-top: 10px;
   margin-bottom: 0;
 }
@@ -437,6 +492,10 @@ h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 16px 32px 30px 32px;
+}
+
+.clients.section {
+  padding: 94px 0 94px;
 }
 
 .client__logo-list {
@@ -466,17 +525,21 @@ h5 {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 4px;
-  border: 1px solid getColor("icon-color");
+  border: 1px solid #afb1b8;
   cursor: pointer;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client__logo-link:hover, .client__logo-link:focus {
-  border: 1px solid getColor("active-element");
+  border: 1px solid #2196f3;
 }
 .client__logo-link .client__logo-icon {
-  fill: getColor("icon-color");
+  fill: #afb1b8;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client__logo-link:hover .client__logo-icon, .client__logo-link:focus .client__logo-icon {
-  fill: getColor("active-element");
+  fill: #2196f3;
 }
 
 .footer {
@@ -516,9 +579,11 @@ h5 {
 }
 .footer__contact-item .footer__contact-link {
   color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__contact-item .footer__contact-link:hover, .footer__contact-item .footer__contact-link:focus {
-  color: getColor("active-element");
+  color: #2196f3;
 }
 
 .footer__social-title,
@@ -569,6 +634,8 @@ h5 {
   padding-left: 16px;
   color: #fff;
   outline: none;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn--footer {
@@ -585,8 +652,12 @@ h5 {
   right: 28px;
 }
 
-.logo-webstudio--footer {
+.footer .logo-webstudio {
   color: #fff;
+}
+
+.container.section {
+  padding: 94px 0 94px;
 }
 
 .gallery__filter-list {
@@ -615,6 +686,10 @@ h5 {
   gap: 30px;
   position: relative;
   overflow: hidden;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery__item-list .gallery__item:hover, .gallery__item-list .gallery__item:focus {
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -646,8 +721,10 @@ h5 {
           justify-content: center;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery__description .gallery__description-text {
   color: #fff;
@@ -673,7 +750,7 @@ h5 {
 }
 .gallery__caption .gallery__undertitle {
   line-height: 1.875;
-  color: getColor("secondary");
+  color: #757575;
   margin: 4px 0px 20px 24px;
 }
 
@@ -686,16 +763,10 @@ h5 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition-delay: 1000ms;
-          transition-delay: 1000ms;
+  -webkit-transition: -webkit-transform 1000ms ease-in 1000ms;
+  transition: -webkit-transform 1000ms ease-in 1000ms;
+  transition: transform 1000ms ease-in 1000ms;
+  transition: transform 1000ms ease-in 1000ms, -webkit-transform 1000ms ease-in 1000ms;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -746,7 +817,7 @@ h5 {
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0.01em;
-  color: getColor(secondary);
+  color: #757575;
 }
 
 .modal__form-input {
@@ -757,9 +828,13 @@ h5 {
   margin-top: 4px;
   padding-left: 42px;
   outline: none;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   bottom: 11px;
   left: 12px;
@@ -767,11 +842,11 @@ h5 {
 
 .modal__form-label:focus-within .modal__form-input,
 .modal__comment-text:focus {
-  border: 1px solid getColor(active-element);
+  border: 1px solid #2196f3;
 }
 
 .modal__form-label:focus-within .modal__form-icon {
-  fill: getColor(active-element);
+  fill: #2196f3;
 }
 
 .modal__comment-text {
@@ -783,6 +858,8 @@ h5 {
   padding: 12px 16px;
   resize: none;
   outline: none;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__comment-text::-webkit-input-placeholder {
   font-size: 12px;
@@ -824,49 +901,12 @@ h5 {
   position: absolute;
   bottom: 40px;
   left: 164px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn--modal:hover, .btn--modal:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.modal__agreement-label {
-  width: 420px;
-  height: 24px;
-  margin: 20px 54px 30px;
-}
-.modal__agreement-label .modal__agreement-text {
-  position: absolute;
-  bottom: 115px;
-  left: 77px;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: getColor(secondary);
-}
-.modal__agreement-label .modal__agreement-text .modal__agreement-link {
-  text-decoration: underline;
-  color: getColor(active-element);
-}
-.modal__agreement-label .modal__agreement-input {
-  position: absolute;
-  bottom: 120px;
-  left: 54px;
-  opacity: 0;
-}
-.modal__agreement-label .modal__agreement-icon {
-  position: absolute;
-  bottom: 120px;
-  left: 54px;
-  fill: #fff;
-  border: 1.5px solid getColor(main);
-  border-radius: 1px;
-}
-
-.modal__agreement-input:checked + .modal__agreement-icon {
-  fill: getColor(active-element);
-  stroke: getColor(active-element);
-  border: transparent;
 }/*# sourceMappingURL=main.css.map */

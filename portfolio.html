@@ -19,8 +19,7 @@
   <header class="header">
     <div class="container">
       <div class="logo-container">
-        <a class="logo-webstudio logo-webstudio--header" href="index.html"><span
-            class="logo-highlight">Web</span>Studio</a>
+        <a class="logo-webstudio" href="index.html"><span class="logo-highlight">Web</span>Studio</a>
       </div>
       <nav class="menu">
         <ul class="menu__item-list">
@@ -51,8 +50,8 @@
     </div>
   </header>
   <main class="gallery">
-    <div class="container">
-      <section class="gallery__projects-filter section">
+    <div class="container section">
+      <section class="gallery__projects-filter">
         <ul class="gallery__filter-list">
           <li class="gallery__filter">
             <button type="button" class="btn btn--gallery">
@@ -81,7 +80,7 @@
           </li>
         </ul>
       </section>
-      <section class="gallery__projects padding-bt">
+      <section class="gallery__projects">
         <ul class="gallery__item-list">
           <li class="gallery__item">
             <img class="gallery__img" src="./images/portfolio1.jpeg" alt="view of the website displayed on a laptop"
@@ -206,8 +205,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__address-box">
-        <a class="logo-webstudio logo-webstudio--footer" href="index.html"><span
-            class="logo-highlight">Web</span>Studio</a>
+        <a class="logo-webstudio" href="index.html"><span class="logo-highlight">Web</span>Studio</a>
         <address class="footer__address">
           <p class="footer__address-text">
             m. Warszawa, Aleje Jerozolimskie 21
@@ -255,7 +253,8 @@
                 type="email" name="user_email" placeholder="E-mail" required /></label>
             <button class="btn btn--footer" type="submit">Zapisz się <svg class="footer__signup-btn-icon" width="24"
                 height="24">
-                <use href="./images/symbol-defs.svg#icon-send"></use>
+                <use href="./images/icons.svg#icon-send">
+                </use>
               </svg></button>
           </div>
         </form>

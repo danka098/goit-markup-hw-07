@@ -1,7 +1,13 @@
+@import ".././utils/variables";
+
 .header {
 	border-bottom: 1px solid #ececec;
 	.container {
 		display: flex;
+		.logo-container {
+			align-items: center;
+			padding: 24px 93px 25px 0;
+		}
 	}
 }
 .menu__item-list {
@@ -24,26 +30,26 @@
 	height: 100%;
 	&::after {
 		content: "";
-		background-color: getColor(active-element);
+		background-color: getColor("active-element");
 		height: 4px;
 		width: 100%;
 		position: absolute;
 		bottom: 0;
 	}
 	.menu__link {
-		color: getColor(active-element);
+		color: getColor("active-element");
 	}
 }
 .menu__link {
 	font-weight: 500;
-	font-size: 14px;
+	font-size: getSize("menuSize");
 	line-height: 1.143;
 	letter-spacing: 0.02em;
-	color: getColor(main);
-	// @include transitionAnimation(color);
+	color: getColor("main");
+	transition: color $mainTransition;
 	&:hover,
 	&:focus {
-		color: getColor(active-element);
+		color: getColor("active-element");
 	}
 }
 .header__contact-list {
@@ -54,23 +60,23 @@
 }
 .header__contact-link {
 	font-weight: 500;
-	font-size: 14px;
+	font-size: getSize("menuSize");
 	line-height: 1.143;
 	letter-spacing: 0.02em;
-	// @include transitionAnimation(color);
+	transition: color $mainTransition;
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	color: getColor(secondary);
+	color: getColor("secondary");
 	&:hover,
 	&:focus {
-		color: getColor(active-element);
+		color: getColor("active-element");
 	}
 	.header__contact-icon {
-		// @include transitionAnimation(fill);
+		transition: fill $mainTransition;
 	}
 	&:hover .header__contact-icon,
 	&:focus .header__contact-icon {
-		fill: getColor(active-element);
+		fill: getColor("active-element");
 	}
 }

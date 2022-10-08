@@ -1,3 +1,9 @@
+@import ".././utils/variables";
+@import ".././utils/mixins";
+
+.clients.section {
+	padding: $paddingSection;
+}
 .client__logo-list {
 	display: flex;
 	width: 100%;
@@ -14,16 +20,16 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 4px;
-	border: 1px solid getColor("icon-color");
+	@include bordered(getColor("icon-color"));
 	cursor: pointer;
-	// @include transitionAnimation(color);
+	transition: color $mainTransition;
 	&:hover,
 	&:focus {
-		border: 1px solid getColor("active-element");
+		@include bordered(getColor("active-element"));
 	}
 	.client__logo-icon {
 		fill: getColor("icon-color");
-		// @include transitionAnimation(fill);
+		transition: fill $mainTransition;
 	}
 	&:hover .client__logo-icon,
 	&:focus .client__logo-icon {

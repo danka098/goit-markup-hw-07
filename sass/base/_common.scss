@@ -1,11 +1,5 @@
-:root {
-	// --main-color: #212121;
-	// --secondary-color: #757575;
-	// --third-color: #f5f4fa;
-	// --icon-color: #afb1b8;
-	// --active-elements-color: #2196f3;
-	--transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-}
+@import ".././utils/variables";
+
 body {
 	margin: 0;
 	padding: 0;
@@ -17,11 +11,11 @@ body {
 .container {
 	width: 100%;
 	max-width: 1200px;
-	padding: 0;
+	padding: 0 15px;
 	margin: 0 auto;
 }
 .section {
-	padding-top: 94px;
+	padding: $paddingSection2;
 }
 ul,
 li {
@@ -43,7 +37,4 @@ h2,
 h5 {
 	margin: 0;
 	padding: 0;
-}
-.padding-bt {
-	padding-bottom: 94px;
 }

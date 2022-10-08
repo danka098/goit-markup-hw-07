@@ -1,3 +1,5 @@
+@import ".././utils/variables";
+
 .backdrop {
 	position: fixed;
 	width: 100%;
@@ -6,10 +8,8 @@
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
-	// @include transitionAnimation(opacity);
-	// @include transitionAnimation(visibility);
-	// transition-property: opacity, visibility;
-	transition-duration: 1000ms;
+	transition: opacity 1000ms $timingTransition,
+		visibility 1000ms $timingTransition;
 }
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0);

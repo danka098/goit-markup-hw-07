@@ -1,3 +1,6 @@
+@import ".././utils/variables";
+@import ".././utils/mixins";
+
 .modal {
 	position: absolute;
 	background-color: #fff;
@@ -6,10 +9,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
-	transition-property: transform;
-	transition-duration: 1000ms;
-	transition-timing-function: ease-in;
-	transition-delay: 1000ms;
+	transition: transform 1000ms ease-in 1000ms;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -23,7 +23,7 @@
 		width: 28px;
 		height: 28px;
 		border-radius: 50%;
-		border: 1px solid rgba(0, 0, 0, 0.1);
+		@include bordered(rgba(0, 0, 0, 0.1));
 		padding: 0;
 		background-color: #fff;
 		cursor: pointer;
@@ -47,47 +47,47 @@
 }
 .modal__form-label,
 .modal__comment-label {
-	font-size: 12px;
+	font-size: getSize("label");
 	font-weight: 400;
 	line-height: 14px;
 	letter-spacing: 0.01em;
-	color: getColor(secondary);
+	color: getColor("secondary");
 }
 .modal__form-input {
 	width: 448px;
 	height: 40px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
+	@include bordered(rgba(33, 33, 33, 0.2));
 	border-radius: 4px;
 	margin-top: 4px;
 	padding-left: 42px;
 	outline: none;
-	// @include transitionAnimation(border);
+	transition: border $mainTransition;
 }
 .modal__form-icon {
-	// @include transitionAnimation(fill);
+	transition: fill $mainTransition;
 	position: absolute;
 	bottom: 11px;
 	left: 12px;
 }
 .modal__form-label:focus-within .modal__form-input,
 .modal__comment-text:focus {
-	border: 1px solid getColor(active-element);
+	@include bordered(getColor("active-element"));
 }
 .modal__form-label:focus-within .modal__form-icon {
-	fill: getColor(active-element);
+	fill: getColor("active-element");
 }
 .modal__comment-text {
 	width: 448px;
 	height: 120px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
+	@include bordered(rgba(33, 33, 33, 0.2));
 	border-radius: 4px;
 	margin-top: 4px;
 	padding: 12px 16px;
 	resize: none;
 	outline: none;
-	// @include transitionAnimation(border);
+	transition: border $mainTransition;
 	&::placeholder {
-		font-size: 12px;
+		font-size: getSize("label");
 		font-weight: 400;
 		line-height: 14px;
 		letter-spacing: 0.01em;
@@ -98,8 +98,7 @@
 	position: absolute;
 	bottom: 40px;
 	left: 164px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	// @include transitionAnimation(box-shadow);
+	transition: box-shadow $mainTransition;
 	&:hover,
 	&:focus {
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

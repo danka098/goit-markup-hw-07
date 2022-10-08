@@ -1,3 +1,8 @@
+@import ".././utils/variables";
+
+.projects.section {
+	padding: $paddingSection;
+}
 .projects__img-list {
 	display: flex;
 	justify-content: space-between;
@@ -19,7 +24,7 @@
 		text-transform: uppercase;
 		color: white;
 		font-weight: 700;
-		font-size: 14px;
+		font-size: getSize("menuSize");
 		line-height: 16px;
 		letter-spacing: 0.03em;
 	}

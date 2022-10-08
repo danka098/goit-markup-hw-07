@@ -1,4 +1,3 @@
-@use "./utils/colors";
 @use "./utils/variables";
 @use "./utils/mixins";
 @use "./base/common";
@@ -10,6 +9,7 @@
 @use "./components/backdrop";
 @use "./components/social-link";
 @use "./components/footer-social-link";
+@use "./components/modal-agreement";
 
 @use "./layout/header";
 @use "./layout/banner";
@@ -20,4 +20,3 @@
 @use "./layout/footer";
 @use "./layout/gallery";
 @use "./layout/modal-form";
-@use "./layout/modal-agreement";

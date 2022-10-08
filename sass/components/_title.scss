@@ -1,6 +1,8 @@
+@import ".././utils/variables";
+
 .main-title {
 	font-weight: 700;
-	font-size: 36px;
+	font-size: getSize("title");
 	line-height: 1.167;
 	text-align: center;
 	margin-bottom: 50px;

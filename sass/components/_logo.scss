@@ -1,15 +1,13 @@
-.logo-container {
-	align-items: center;
-	padding: 24px 93px 25px 0;
-	.logo-webstudio {
-		font-family: "Raleway", sans-serif;
-		font-style: normal;
-		font-weight: 700;
-		font-size: 26px;
-		line-height: 1.192;
-		color: getColor(main);
-		.logo-highlight {
-			color: getColor("active-element");
-		}
+@import ".././utils/variables";
+
+.logo-webstudio {
+	font-family: "Raleway", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: getSize("logo");
+	line-height: 1.192;
+	color: getColor(main);
+	.logo-highlight {
+		color: getColor("active-element");
 	}
 }

@@ -1,10 +1,12 @@
+@import ".././utils/variables";
+@import ".././utils/mixins";
+
 .footer {
 	background-color: #2f303a;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	.container {
 		display: flex;
-		justify-content: space-between;
 		align-items: baseline;
 	}
 }
@@ -12,7 +14,7 @@
 	margin-right: 70px;
 	width: 250px;
 	.footer__address {
-		font-size: 14px;
+		font-size: getSize("menuSize");
 		line-height: 1.714;
 		font-style: normal;
 		margin-top: 20px;
@@ -26,7 +28,7 @@
 	margin-bottom: 9px;
 	.footer__contact-link {
 		color: rgba(255, 255, 255, 0.6);
-		// transition: color 250ms var(--transition-timing);
+		transition: color $mainTransition;
 		&:hover,
 		&:focus {
 			color: getColor("active-element");
@@ -56,7 +58,7 @@
 	.footer__signup-label {
 		position: relative;
 		&:focus-within .footer__signup-input {
-			border: 1px solid #fff;
+			@include bordered(#fff);
 		}
 		.footer__signup-input {
 			position: absolute;
@@ -71,7 +73,7 @@
 			padding-left: 16px;
 			color: #fff;
 			outline: none;
-			// @include transitionAnimation(border);
+			transition: border $mainTransition;
 		}
 	}
 }
@@ -87,6 +89,6 @@
 		right: 28px;
 	}
 }
-.logo-webstudio--footer {
+.footer .logo-webstudio {
 	color: #fff;
 }
