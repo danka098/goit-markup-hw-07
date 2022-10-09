@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@200;500;700;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
 <body>
@@ -23,7 +23,7 @@
       </div>
       <nav class="menu">
         <ul class="menu__item-list">
-          <li class="menu__item--active">
+          <li class="menu__item menu__item--active">
             <a class="menu__link" href="#">Agencja</a>
           </li>
           <li class="menu__item">
@@ -244,7 +244,7 @@
         </ul>
       </div>
     </section>
-    <section class="clients container section">
+    <section class="client container section">
       <h2 class="main-title">Nasi klienci</h2>
       <ul class="client__logo-list">
         <li class="client__logo-item">
@@ -354,7 +354,7 @@
       <form class="modal__form" name="signup-form">
         <div class="modal__form-box">
           <h3 class="modal__form-title">Zostaw swoje dane w formularzu poniżej</h3>
-          <ul class="modal__form__list">
+          <ul class="modal__form-list">
             <li class="modal__form-item">
               <label class="modal__form-label" for="user_name">Imię
                 <input class="modal__form-input" type="text" name="user_name" id="user_name" />
@@ -397,8 +397,7 @@
         </div>
       </form>
     </div>
-  </div>
-  <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

@@ -1,31 +1,31 @@
-@import ".././utils/variables";
-
-.projects.section {
-	padding: $paddingSection;
-}
-.projects__img-list {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	.projects__img-item {
-		position: relative;
+.projects {
+	&.section {
+		padding: $paddingSection;
 	}
-}
-.projects__caption {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 70px;
-	background: rgba(47, 48, 58, 0.8);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	.projects__caption-text {
-		text-transform: uppercase;
-		color: white;
-		font-weight: 700;
-		font-size: getSize("menuSize");
-		line-height: 16px;
-		letter-spacing: 0.03em;
+	&__img-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.projects__img-item {
+			position: relative;
+		}
+		.projects__caption {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 70px;
+			background: rgba(47, 48, 58, 0.8);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&-text {
+				text-transform: uppercase;
+				color: white;
+				font-weight: 700;
+				font-size: getSize("menuSize");
+				line-height: 16px;
+				letter-spacing: 0.03em;
+			}
+		}
 	}
 }
