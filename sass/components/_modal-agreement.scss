@@ -1,21 +1,23 @@
-.modal__agreement-label {
-	width: 420px;
-	height: 24px;
-	margin: 20px 54px 30px;
-	.modal__agreement-text {
-		position: absolute;
-		bottom: 115px;
-		left: 77px;
-		font-size: getSize("menuSize");
-		line-height: 24px;
-		letter-spacing: 0.03em;
-		color: getColor("secondary");
-		.modal__agreement-link {
-			text-decoration: underline;
-			color: getColor("active-element");
+.modal {
+	&__agreement-label {
+		width: 420px;
+		height: 24px;
+		margin: 20px 54px 30px;
+		.modal__agreement-text {
+			position: absolute;
+			bottom: 115px;
+			left: 77px;
+			font-size: getSize("menuSize");
+			line-height: 24px;
+			letter-spacing: 0.03em;
+			color: getColor("secondary");
+			.modal__agreement-link {
+				text-decoration: underline;
+				color: getColor("active-element");
+			}
 		}
 	}
-	.modal__agreement-input {
+	&__agreement-input {
 		position: absolute;
 		bottom: 120px;
 		left: 54px;
@@ -26,7 +28,7 @@
 			border: transparent;
 		}
 	}
-	.modal__agreement-icon {
+	&__agreement-icon {
 		position: absolute;
 		bottom: 120px;
 		left: 54px;
